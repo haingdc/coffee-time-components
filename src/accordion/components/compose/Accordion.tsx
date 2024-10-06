@@ -1,7 +1,7 @@
 import React from 'react'
-import Summary from '../Summary.tsx'
-import Content from '../Content.tsx'
-import Details from '../Details.tsx'
+import Summary from '../Summary'
+import Content from '../Content'
+import Details from '../Details'
 
 interface AccordionProps
   extends React.DetailsHTMLAttributes<HTMLDetailsElement>,
