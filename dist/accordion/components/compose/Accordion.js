@@ -14,16 +14,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importDefault(require("react"));
+const jsx_runtime_1 = require("react/jsx-runtime");
 const Summary_1 = __importDefault(require("../Summary"));
 const Content_1 = __importDefault(require("../Content"));
 const Details_1 = __importDefault(require("../Details"));
 const Accordion = (_a) => {
     var { summary, children } = _a, htmlDetailsProps = __rest(_a, ["summary", "children"]);
-    return (<Details_1.default {...htmlDetailsProps}>
-      <Summary_1.default>{summary}</Summary_1.default>
-      <Content_1.default>{children}</Content_1.default>
-    </Details_1.default>);
+    return ((0, jsx_runtime_1.jsxs)(Details_1.default, Object.assign({}, htmlDetailsProps, { children: [(0, jsx_runtime_1.jsx)(Summary_1.default, { children: summary }), (0, jsx_runtime_1.jsx)(Content_1.default, { children: children })] })));
 };
 exports.default = Accordion;
-//# sourceMappingURL=Accordion.jsx.map
+//# sourceMappingURL=Accordion.js.map

@@ -10,16 +10,11 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importDefault(require("react"));
+const jsx_runtime_1 = require("react/jsx-runtime");
 const Details = (_a) => {
     var { children } = _a, rest = __rest(_a, ["children"]);
-    return (<details {...rest} className="accordion">
-      {children}
-    </details>);
+    return ((0, jsx_runtime_1.jsx)("details", Object.assign({}, rest, { className: "accordion", children: children })));
 };
 exports.default = Details;
-//# sourceMappingURL=Details.jsx.map
+//# sourceMappingURL=Details.js.map

@@ -1,2 +1,2 @@
-export * from './accordion';
+export declare const testPackage: () => string;
 //# sourceMappingURL=index.d.ts.map
