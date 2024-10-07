@@ -1,1 +1,1 @@
-{"version":3,"file":"Content.js","sourceRoot":"","sources":["../../../src/accordion/components/Content.tsx"],"names":[],"mappings":";;;AAEA,MAAM,OAAO,GAAsC,CAAC,EAAE,QAAQ,EAAE,EAAE,EAAE;IAClE,OAAO,CACL,wCACG,QAAQ,GACP,CACL,CAAC;AACJ,CAAC,CAAC;AAEF,kBAAe,OAAO,CAAC"}
+{"version":3,"file":"Content.js","sourceRoot":"","sources":["../../../src/accordion/components/Content.tsx"],"names":[],"mappings":";AAEA,MAAM,OAAO,GAAsC,CAAC,EAAE,QAAQ,EAAE,EAAE,EAAE;IAClE,OAAO,CACL,sBACG,QAAQ,GACP,CACL,CAAC;AACJ,CAAC,CAAC;AAEF,eAAe,OAAO,CAAC"}

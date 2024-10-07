@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const jsx_runtime_1 = require("react/jsx-runtime");
+import { jsx as _jsx } from "react/jsx-runtime";
 const Summary = ({ children }) => {
-    return ((0, jsx_runtime_1.jsx)("summary", { children: children }));
+    return (_jsx("summary", { children: children }));
 };
-exports.default = Summary;
+export default Summary;
 //# sourceMappingURL=Summary.js.map
