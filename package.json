@@ -16,8 +16,9 @@
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
+    "build": "tsc",
     "preversion": "npm run build",
-    "version": "npm publish"
+"version": "npm publish"
   },
   "author": "",
   "license": "ISC",
