@@ -1,1 +1,3 @@
-export * from './accordion';
+export const testPackage = () => {
+  return "Hello World!"
+}
