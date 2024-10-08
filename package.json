@@ -1,6 +1,6 @@
 {
   "name": "coffee-time-components",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "types": "module",
   "description": "",
   "main": "dist/index.js",
