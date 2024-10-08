@@ -32,5 +32,8 @@ module.exports = {
     moduleIds: "named",
     chunkIds: "named",
     splitChunks: false,
-  }
+  },
+  externals: {
+    react: 'react'
+  },
 };
