@@ -1,6 +1,6 @@
 {
   "name": "coffee-time-components",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "types": "module",
   "description": "",
   "main": "dist/index.js",
@@ -16,15 +16,22 @@
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
-    "build": "tsc",
+    "build-tsc": "tsc",
+    "build": "webpack",
     "preversion": "npm run build",
-"version": "npm publish"
+    "version": "npm publish"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/react": "^18.3.11",
-    "typescript": "^5.6.2"
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.2",
+    "typescript-plugin-css-modules": "^5.1.0",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
   },
   "peerDependencies": {
     "react": "^18.2.0"
