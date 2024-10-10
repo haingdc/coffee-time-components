@@ -4,11 +4,25 @@ const path = require('path');
  * @type {import("webpack/types").Configuration}
  */
 module.exports = {
-  entry: './src/index.ts', // Điểm vào của ứng dụng
+  entry: {
+    index: './src/index.ts',
+    'accordion/components/compose/Accordion': './src/accordion/components/compose/Accordion.tsx',
+    'accordion/components/Details': './src/accordion/components/Details.tsx',
+    'accordion/components/Summary': './src/accordion/components/Summary.tsx',
+    'accordion/components/Content': './src/accordion/components/Content.tsx',
+    'accordion/components/ContentLink': './src/accordion/components/ContentLink.tsx',
+  },
   mode: 'production', // Chế độ phát triển
   output: {
-    filename: 'index.js', // Tên tệp đầu ra
+    filename: '[name].js', // Tên tệp đầu ra
     path: path.resolve(__dirname, 'dist'), // Đường dẫn đến thư mục đầu ra
+    library: {
+      type: 'module',
+    },
+    clean: true,
+  },
+  experiments: {
+    outputModule: true,
   },
   module: {
     rules: [
@@ -34,6 +48,6 @@ module.exports = {
     splitChunks: false,
   },
   externals: {
-    react: 'react'
+    react: 'react',
   },
 };

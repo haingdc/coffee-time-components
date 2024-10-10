@@ -1,22 +1,40 @@
 {
   "name": "coffee-time-components",
-  "version": "1.0.8",
+  "version": "1.0.14",
   "types": "module",
   "description": "",
   "main": "dist/index.js",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./src/index.ts",
       "default": "./dist/index.js"
+    },
+    "./accordion/components/compose/Accordion": {
+      "types": "./src/accordion/components/compose/Accordion.tsx",
+      "default": "./dist/accordion/components/compose/Accordion.js"
+    },
+    "./accordion/components/Details": {
+      "types": "./src/accordion/components/Details.tsx",
+      "default": "./dist/accordion/components/Details.js"
+    },
+    "./accordion/components/Summary": {
+      "types": "./src/accordion/components/Summary.tsx",
+      "default": "./dist/accordion/components/Summary.js"
+    },
+    "./accordion/components/Content": {
+      "types": "./src/accordion/components/Content.tsx",
+      "default": "./dist/accordion/components/Content.js"
+    },
+    "./accordion/components/ContentLink": {
+      "types": "./src/accordion/components/ContentLink.tsx",
+      "default": "./dist/accordion/components/ContentLink.js"
     }
   },
   "scripts": {
-    "clean": "rimraf dist",
-    "prebuild": "npm run clean",
-    "build-tsc": "tsc",
     "build": "webpack",
     "preversion": "npm run build",
     "version": "npm publish"
@@ -28,16 +46,13 @@
     "css-loader": "^7.1.2",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
-    "typescript": "^5.6.2",
-    "typescript-plugin-css-modules": "^5.1.0",
+    "typescript": "^5.6.3",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4"
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": "^16.8 || ^17 || ^18",
+    "react-dom": "^16.8 || ^17 || ^18"
   },
-  "packageManager": "npm@10.8.2+sha512.c7f0088c520a46596b85c6f8f1da943400199748a0f7ea8cb8df75469668dc26f6fb3ba26df87e2884a5ebe91557292d0f3db7d0929cdb4f14910c3032ac81fb",
-  "dependencies": {
-    "rimraf": "^6.0.1"
-  }
+  "packageManager": "npm@10.8.2+sha512.c7f0088c520a46596b85c6f8f1da943400199748a0f7ea8cb8df75469668dc26f6fb3ba26df87e2884a5ebe91557292d0f3db7d0929cdb4f14910c3032ac81fb"
 }

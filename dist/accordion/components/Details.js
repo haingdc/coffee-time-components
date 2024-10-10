@@ -180,7 +180,7 @@ var __webpack_unused_export__;
  * LICENSE file in the root directory of this source tree.
  */
 var f=__webpack_require__("react"),k=Symbol.for("react.element"),l=Symbol.for("react.fragment"),m=Object.prototype.hasOwnProperty,n=f.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,p={key:!0,ref:!0,__self:!0,__source:!0};
-function q(c,a,g){var b,d={},e=null,h=null;void 0!==g&&(e=""+g);void 0!==a.key&&(e=""+a.key);void 0!==a.ref&&(h=a.ref);for(b in a)m.call(a,b)&&!p.hasOwnProperty(b)&&(d[b]=a[b]);if(c&&c.defaultProps)for(b in a=c.defaultProps,a)void 0===d[b]&&(d[b]=a[b]);return{$$typeof:k,type:c,key:e,ref:h,props:d,_owner:n.current}}__webpack_unused_export__=l;exports.jsx=q;exports.jsxs=q;
+function q(c,a,g){var b,d={},e=null,h=null;void 0!==g&&(e=""+g);void 0!==a.key&&(e=""+a.key);void 0!==a.ref&&(h=a.ref);for(b in a)m.call(a,b)&&!p.hasOwnProperty(b)&&(d[b]=a[b]);if(c&&c.defaultProps)for(b in a=c.defaultProps,a)void 0===d[b]&&(d[b]=a[b]);return{$$typeof:k,type:c,key:e,ref:h,props:d,_owner:n.current}}__webpack_unused_export__=l;exports.jsx=q;__webpack_unused_export__=q;
 
 
 /***/ }),
@@ -446,145 +446,6 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/accordion/components/Content.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./node_modules/react/jsx-runtime.js");
-
-const Content = ({ children }) => {
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: children }));
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Content);
-
-
-/***/ }),
-
-/***/ "./src/accordion/components/ContentLink.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./node_modules/react/jsx-runtime.js");
-
-const ContentLink = ({ href, children }) => {
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("a", { href: href, children: children }) }));
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ContentLink);
-
-
-/***/ }),
-
-/***/ "./src/accordion/components/Details.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ components_Details)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__("./node_modules/react/jsx-runtime.js");
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
-var injectStylesIntoStyleTag = __webpack_require__("./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
-var styleDomAPI = __webpack_require__("./node_modules/style-loader/dist/runtime/styleDomAPI.js");
-var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
-var insertBySelector = __webpack_require__("./node_modules/style-loader/dist/runtime/insertBySelector.js");
-var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
-var setAttributesWithoutAttributes = __webpack_require__("./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
-var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
-var insertStyleElement = __webpack_require__("./node_modules/style-loader/dist/runtime/insertStyleElement.js");
-var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
-var styleTagTransform = __webpack_require__("./node_modules/style-loader/dist/runtime/styleTagTransform.js");
-var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/accordion/components/accordion.css
-var accordion = __webpack_require__("./node_modules/css-loader/dist/cjs.js!./src/accordion/components/accordion.css");
-;// ./src/accordion/components/accordion.css
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (styleTagTransform_default());
-options.setAttributes = (setAttributesWithoutAttributes_default());
-options.insert = insertBySelector_default().bind(null, "head");
-options.domAPI = (styleDomAPI_default());
-options.insertStyleElement = (insertStyleElement_default());
-
-var update = injectStylesIntoStyleTag_default()(accordion/* default */.A, options);
-
-
-
-
-       /* harmony default export */ const components_accordion = (accordion/* default */.A && accordion/* default */.A.locals ? accordion/* default */.A.locals : undefined);
-
-;// ./src/accordion/components/Details.tsx
-
-
-const Details = ({ children, ...rest }) => {
-    return ((0,jsx_runtime.jsx)("details", { ...rest, className: "accordion", children: children }));
-};
-/* harmony default export */ const components_Details = (Details);
-
-
-/***/ }),
-
-/***/ "./src/accordion/components/Summary.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./node_modules/react/jsx-runtime.js");
-
-const Summary = ({ children }) => {
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("summary", { children: children }));
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Summary);
-
-
-/***/ }),
-
-/***/ "./src/accordion/components/compose/Accordion.tsx":
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _Summary__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./src/accordion/components/Summary.tsx");
-/* harmony import */ var _Content__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./src/accordion/components/Content.tsx");
-/* harmony import */ var _Details__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./src/accordion/components/Details.tsx");
-
-
-
-
-const Accordion = ({ summary, children, ...htmlDetailsProps }) => {
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_Details__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .A, { ...htmlDetailsProps, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_Summary__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A, { children: summary }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_Content__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A, { children: children })] }));
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Accordion);
-
-
-/***/ }),
-
 /***/ "react":
 /***/ ((module) => {
 
@@ -658,38 +519,67 @@ var __webpack_exports__ = {};
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  nD: () => (/* reexport */ Accordion/* default */.A),
-  UC: () => (/* reexport */ Content/* default */.A),
-  ib: () => (/* reexport */ ContentLink/* default */.A),
-  B_: () => (/* reexport */ Details/* default */.A),
-  BD: () => (/* reexport */ Summary/* default */.A)
+  A: () => (/* binding */ components_Details)
 });
 
-// EXTERNAL MODULE: ./src/accordion/components/compose/Accordion.tsx
-var Accordion = __webpack_require__("./src/accordion/components/compose/Accordion.tsx");
-// EXTERNAL MODULE: ./src/accordion/components/Details.tsx + 1 modules
-var Details = __webpack_require__("./src/accordion/components/Details.tsx");
-// EXTERNAL MODULE: ./src/accordion/components/Summary.tsx
-var Summary = __webpack_require__("./src/accordion/components/Summary.tsx");
-// EXTERNAL MODULE: ./src/accordion/components/Content.tsx
-var Content = __webpack_require__("./src/accordion/components/Content.tsx");
-// EXTERNAL MODULE: ./src/accordion/components/ContentLink.tsx
-var ContentLink = __webpack_require__("./src/accordion/components/ContentLink.tsx");
-;// ./src/accordion/index.ts
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__("./node_modules/react/jsx-runtime.js");
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag = __webpack_require__("./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+var styleDomAPI = __webpack_require__("./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
+var insertBySelector = __webpack_require__("./node_modules/style-loader/dist/runtime/insertBySelector.js");
+var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+var setAttributesWithoutAttributes = __webpack_require__("./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+var insertStyleElement = __webpack_require__("./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
+var styleTagTransform = __webpack_require__("./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/accordion/components/accordion.css
+var accordion = __webpack_require__("./node_modules/css-loader/dist/cjs.js!./src/accordion/components/accordion.css");
+;// ./src/accordion/components/accordion.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (styleTagTransform_default());
+options.setAttributes = (setAttributesWithoutAttributes_default());
+options.insert = insertBySelector_default().bind(null, "head");
+options.domAPI = (styleDomAPI_default());
+options.insertStyleElement = (insertStyleElement_default());
+
+var update = injectStylesIntoStyleTag_default()(accordion/* default */.A, options);
 
 
 
 
+       /* harmony default export */ const components_accordion = (accordion/* default */.A && accordion/* default */.A.locals ? accordion/* default */.A.locals : undefined);
+
+;// ./src/accordion/components/Details.tsx
 
 
-;// ./src/index.ts
+const Details = ({ children, ...rest }) => {
+    return ((0,jsx_runtime.jsx)("details", { ...rest, className: "accordion", children: children }));
+};
+/* harmony default export */ const components_Details = (Details);
 
+var __webpack_exports__default = __webpack_exports__.A;
+export { __webpack_exports__default as default };
 
-var __webpack_exports__Accordion = __webpack_exports__.nD;
-var __webpack_exports__Content = __webpack_exports__.UC;
-var __webpack_exports__ContentLink = __webpack_exports__.ib;
-var __webpack_exports__Details = __webpack_exports__.B_;
-var __webpack_exports__Summary = __webpack_exports__.BD;
-export { __webpack_exports__Accordion as Accordion, __webpack_exports__Content as Content, __webpack_exports__ContentLink as ContentLink, __webpack_exports__Details as Details, __webpack_exports__Summary as Summary };
-
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=Details.js.map
