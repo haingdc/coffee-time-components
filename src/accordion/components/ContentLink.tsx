@@ -6,9 +6,9 @@ interface ContentLinkProps extends React.PropsWithChildren {
 
 const ContentLink: React.FC<ContentLinkProps> = ({ href, children }) => {
   return (
-    <p>
+    <div>
       <a href={href}>{children}</a>
-    </p>
+    </div>
   );
 };
 

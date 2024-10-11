@@ -1,4 +1,6 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { exec } = require('child_process');
 
 /**
  * @type {import("webpack/types").Configuration}
@@ -50,4 +52,33 @@ module.exports = {
   externals: {
     react: 'react',
   },
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'src/accordion/components/accordion.css', // Đường dẫn tới file mà bạn muốn sao chép
+          to: 'accordion/tailwind/components/accordion.css', // Đường dẫn nơi bạn muốn file được sao chép
+        },
+      ],
+    }),
+    {
+      apply: (compiler) => {
+        compiler.hooks.afterEmit.tapAsync('AfterEmitPlugin', (compilation, callback) => {
+          // Chèn mã vào file CSS
+          const cssToPrepend = '@tailwind base;\n' +
+            '@tailwind components;\n' +
+            '@tailwind utilities;\n';
+          const filePath = path.resolve(__dirname, 'dist', 'accordion', 'tailwind', 'components', 'accordion.css');
+
+          // Đọc và ghi lại file với đoạn mã mới
+          exec(`echo "${cssToPrepend}" | cat - ${filePath} > temp && mv temp ${filePath}`, (err) => {
+            if (err) {
+              console.error(`Error writing to CSS file: ${err}`);
+            }
+            callback();
+          });
+        });
+      },
+    },
+  ]
 };

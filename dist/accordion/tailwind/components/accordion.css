@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer reset {
   /* Khởi tạo các kiểu lập trình cơ bản */
   details {

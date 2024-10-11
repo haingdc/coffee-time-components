@@ -1,6 +1,6 @@
 {
   "name": "coffee-time-components",
-  "version": "1.0.14",
+  "version": "1.0.22",
   "types": "module",
   "description": "",
   "main": "dist/index.js",
@@ -32,6 +32,10 @@
     "./accordion/components/ContentLink": {
       "types": "./src/accordion/components/ContentLink.tsx",
       "default": "./dist/accordion/components/ContentLink.js"
+    },
+    "./accordion/tailwind/components/accordion.css": {
+      "require": "./dist/accordion/tailwind/components/accordion.css",
+      "import": "./dist/accordion/tailwind/components/accordion.css"
     }
   },
   "scripts": {
@@ -43,6 +47,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/react": "^18.3.11",
+    "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",

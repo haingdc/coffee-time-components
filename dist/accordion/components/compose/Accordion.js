@@ -33,20 +33,27 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@layer reset {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 10px 0;
+    font-family: sans-serif;
+  }
+
+  .accordion:hover {
+    box-shadow: 2px 2px 2px 1px #e6e6e6;
   }
 
   .accordion summary {
     padding: 10px;
-    background-color: #f0f0f0;
+    background-color: light-dark(#e6e6e6, #93a6e2);
     border: 1px solid #ddd;
     font-weight: bold;
+    cursor: pointer;
   }
 
-  .accordion div {
+  .accordion .accordion-content {
+    margin: 0;
     padding: 10px;
     background-color: #fafafa;
   }
-}`, "",{"version":3,"sources":["webpack://./src/accordion/components/accordion.css"],"names":[],"mappings":"AAAA;EACE,uCAAuC;EACvC;IACE,cAAc;EAChB;;EAEA;IACE,gBAAgB;IAChB,eAAe;EACjB;AACF;;AAEA;EACE;IACE,sBAAsB;IACtB,kBAAkB;IAClB,cAAc;EAChB;;EAEA;IACE,aAAa;IACb,yBAAyB;IACzB,sBAAsB;IACtB,iBAAiB;EACnB;;EAEA;IACE,aAAa;IACb,yBAAyB;EAC3B;AACF","sourcesContent":["@layer reset {\n  /* Khởi tạo các kiểu lập trình cơ bản */\n  details {\n    display: block;\n  }\n\n  summary {\n    list-style: none;\n    cursor: pointer;\n  }\n}\n\n@layer components {\n  .accordion {\n    border: 1px solid #ccc;\n    border-radius: 5px;\n    margin: 10px 0;\n  }\n\n  .accordion summary {\n    padding: 10px;\n    background-color: #f0f0f0;\n    border: 1px solid #ddd;\n    font-weight: bold;\n  }\n\n  .accordion div {\n    padding: 10px;\n    background-color: #fafafa;\n  }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/accordion/components/accordion.css"],"names":[],"mappings":"AAAA;EACE,uCAAuC;EACvC;IACE,cAAc;EAChB;;EAEA;IACE,gBAAgB;IAChB,eAAe;EACjB;AACF;;AAEA;EACE;IACE,sBAAsB;IACtB,kBAAkB;IAClB,cAAc;IACd,uBAAuB;EACzB;;EAEA;IACE,mCAAmC;EACrC;;EAEA;IACE,aAAa;IACb,8CAA8C;IAC9C,sBAAsB;IACtB,iBAAiB;IACjB,eAAe;EACjB;;EAEA;IACE,SAAS;IACT,aAAa;IACb,yBAAyB;EAC3B;AACF","sourcesContent":["@layer reset {\n  /* Khởi tạo các kiểu lập trình cơ bản */\n  details {\n    display: block;\n  }\n\n  summary {\n    list-style: none;\n    cursor: pointer;\n  }\n}\n\n@layer components {\n  .accordion {\n    border: 1px solid #ccc;\n    border-radius: 5px;\n    margin: 10px 0;\n    font-family: sans-serif;\n  }\n\n  .accordion:hover {\n    box-shadow: 2px 2px 2px 1px #e6e6e6;\n  }\n\n  .accordion summary {\n    padding: 10px;\n    background-color: light-dark(#e6e6e6, #93a6e2);\n    border: 1px solid #ddd;\n    font-weight: bold;\n    cursor: pointer;\n  }\n\n  .accordion .accordion-content {\n    margin: 0;\n    padding: 10px;\n    background-color: #fafafa;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -455,7 +462,7 @@ module.exports = styleTagTransform;
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./node_modules/react/jsx-runtime.js");
 
 const Content = ({ children }) => {
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: children }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: "accordion-content", children: children }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Content);
 

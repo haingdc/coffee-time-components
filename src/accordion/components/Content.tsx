@@ -2,9 +2,9 @@ import React from "react";
 
 const Content: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
-    <p>
+    <div className="accordion-content">
       {children}
-    </p>
+    </div>
   );
 };
 
