@@ -16,6 +16,7 @@
     border-radius: 5px;
     margin: 10px 0;
     font-family: sans-serif;
+    overflow: hidden;
   }
 
   .accordion:hover {
@@ -26,13 +27,32 @@
     padding: 10px;
     background-color: light-dark(#e6e6e6, #93a6e2);
     border: 1px solid #ddd;
-    font-weight: bold;
     cursor: pointer;
+    display: flex;
+    align-items: center; /* Canh giữa các phần tử */
   }
 
   .accordion .accordion-content {
     margin: 0;
     padding: 10px;
     background-color: #fafafa;
+  }
+
+  .arrow {
+    margin-right: 8px; /* Thêm khoảng cách giữa mũi tên và văn bản */
+    transition: transform 0.3s ease; /* Chuyển tiếp khi thay đổi trạng thái */
+  }
+
+  .arrow-icon {
+    user-select: none;
+    transition: transform 0.3s ease;
+    transform: rotate(-90deg);
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Khi details mở */
+  details[open] summary .arrow-icon {
+    transform: rotate(0deg); /* Quay mũi tên 90 độ khi mở */
   }
 }

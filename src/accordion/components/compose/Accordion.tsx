@@ -3,7 +3,7 @@ import Summary from '../Summary'
 import Content from '../Content'
 import Details from '../Details'
 
-interface AccordionProps
+export interface AccordionProps
   extends React.DetailsHTMLAttributes<HTMLDetailsElement>,
     React.PropsWithChildren {
   summary: string
