@@ -37,6 +37,10 @@ module.exports = {
         test: /\.css$/, // Kiểm tra tệp CSS
         use: ['style-loader', 'css-loader'], // Sử dụng loader để xử lý
       },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack', 'url-loader'], // Sử dụng loader cho SVG
+      },
     ],
   },
   resolve: {
