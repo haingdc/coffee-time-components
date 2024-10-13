@@ -1,0 +1,1 @@
+interface HTMLSummaryElement extends HTMLElement {}

@@ -29,7 +29,9 @@
     border: 1px solid #ddd;
     cursor: pointer;
     display: flex;
-    align-items: center; /* Canh giữa các phần tử */
+    align-items: center;
+    line-height: normal;
+    font-weight: bold;
   }
 
   .accordion .accordion-content {

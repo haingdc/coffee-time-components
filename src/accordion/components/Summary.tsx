@@ -1,9 +1,11 @@
 import React from 'react';
 import iconCaret from '../../../images/icons/caret.svg';
 
-const Summary: React.FC<React.PropsWithChildren> = ({ children }) => {
+export type SummaryProps = React.DetailsHTMLAttributes<HTMLSummaryElement> & React.PropsWithChildren;
+
+const Summary: React.FC<SummaryProps> = ({ children, ...htmlSummaryProps }) => {
   return (
-    <summary>
+    <summary {...htmlSummaryProps}>
       <span className="arrow">
         <img src={iconCaret} alt="Arrow Icon" className="arrow-icon" />
       </span>
