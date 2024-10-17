@@ -1,6 +1,6 @@
 {
   "name": "coffee-time-components",
-  "version": "1.0.37",
+  "version": "1.0.38",
   "types": "module",
   "description": "",
   "main": "dist/index.js",
@@ -45,10 +45,10 @@
   "scripts": {
     "build": "webpack",
     "preversion": "npm run build",
+    "patch": "npm version patch --force",
     "version": "npm publish",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "pub": "npm version patch --force && npm publish"
+    "build-storybook": "storybook build"
   },
   "author": "",
   "license": "ISC",
