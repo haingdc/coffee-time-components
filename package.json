@@ -1,6 +1,6 @@
 {
   "name": "coffee-time-components",
-  "version": "1.0.43",
+  "version": "1.0.44",
   "types": "module",
   "description": "",
   "main": "dist/index.js",
@@ -33,11 +33,11 @@
       "types": "./src/accordion/components/ContentLink.tsx",
       "default": "./dist/accordion/components/ContentLink.js"
     },
-    "./list/UnOrderList": {
+    "./list/components/UnOrderList": {
       "types": "./src/list/components/UnOrderList.tsx",
       "default": "./dist/list/components/UnOrderList.js"
     },
-    "./list/ListItem": {
+    "./list/components/ListItem": {
       "types": "./src/list/components/ListItem.tsx",
       "default": "./dist/list/components/ListItem.js"
     }
