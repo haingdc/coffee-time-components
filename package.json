@@ -1,6 +1,6 @@
 {
   "name": "coffee-time-components",
-  "version": "1.0.31",
+  "version": "1.0.37",
   "types": "module",
   "description": "",
   "main": "dist/index.js",
@@ -33,9 +33,13 @@
       "types": "./src/accordion/components/ContentLink.tsx",
       "default": "./dist/accordion/components/ContentLink.js"
     },
-    "./accordion/tailwind/components/accordion.css": {
-      "require": "./dist/accordion/tailwind/components/accordion.css",
-      "import": "./dist/accordion/tailwind/components/accordion.css"
+    "./list/UnOrderList": {
+      "types": "./src/list/components/UnOrderList.tsx",
+      "default": "./dist/list/components/UnOrderList.js"
+    },
+    "./list/ListItem": {
+      "types": "./src/list/components/ListItem.tsx",
+      "default": "./dist/list/components/ListItem.js"
     }
   },
   "scripts": {
@@ -43,7 +47,8 @@
     "preversion": "npm run build",
     "version": "npm publish",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "pub": "npm version patch --force && npm publish"
   },
   "author": "",
   "license": "ISC",
