@@ -24,6 +24,7 @@ module.exports = {
       type: 'module',
     },
     clean: true,
+    // publicPath: './public',
   },
   experiments: {
     outputModule: true,
@@ -88,8 +89,16 @@ module.exports = {
           to: 'styles/tailwind/base.css', // Đường dẫn nơi bạn muốn file được sao chép
         },
         // {
-        //   from: 'src/list/components/list.css', // Đường dẫn tới file mà bạn muốn sao chép
-        //   to: 'list/tailwind/components/list.css', // Đường dẫn nơi bạn muốn file được sao chép
+        //   from: 'images/icons/bullet.svg', // Sao chép bullet.svg
+        //   to: 'icons/bullet.svg',
+        // },
+        // {
+        //   from: 'src/list/components/list.css',
+        //   to: 'styles/tailwind/list.css',
+        //   transform: (content) => {
+        //     // Cập nhật đường dẫn trong CSS
+        //     return content.toString().replace(/url\('@images\/icons\/bullet.svg'\)/g, "url('../../icons/bullet.svg')");
+        //   },
         // },
       ],
     }),
@@ -99,7 +108,7 @@ module.exports = {
           const filesToUpdate = [
             path.resolve(__dirname, 'dist/styles/tailwind/base.css'),
             path.resolve(__dirname, 'dist/styles/tailwind/accordion.css'),
-            // path.resolve(__dirname, 'dist/list/tailwind/components/list.css'),
+            // path.resolve(__dirname, 'dist/styles/tailwind/list.css'),
           ];
 
           // Append '@tailwind' cho tất cả các file
