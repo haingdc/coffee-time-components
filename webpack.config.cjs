@@ -135,14 +135,14 @@ module.exports = {
           from: path.resolve(__dirname, 'images'), // Đường dẫn nguồn
           to: path.resolve(__dirname, 'dist/images'),   // Đường dẫn đích
         },
-        // {
-        //   from: 'src/list/components/list.css',
-        //   to: 'styles/tailwind/list.css',
+        {
+          from: 'src/list/components/list.css',
+          to: 'styles/tailwind/list.css',
         //   transform: (content) => {
         //     // Cập nhật đường dẫn trong CSS
         //     return content.toString().replace(/url\('@images\/icons\/bullet.svg'\)/g, "url('../../icons/bullet.svg')");
         //   },
-        // },
+        },
       ],
     }),
     {
@@ -151,7 +151,7 @@ module.exports = {
           const filesToUpdate = [
             path.resolve(__dirname, 'dist/styles/tailwind/base.css'),
             path.resolve(__dirname, 'dist/styles/tailwind/accordion.css'),
-            // path.resolve(__dirname, 'dist/styles/tailwind/list.css'),
+            path.resolve(__dirname, 'dist/styles/tailwind/list.css'),
           ];
 
           // Append '@tailwind' cho tất cả các file
