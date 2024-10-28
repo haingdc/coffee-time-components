@@ -1,6 +1,7 @@
 @layer components {
   .un-order-list {
-    list-style-image: url('../../../images/icons/bullet.svg');
+    /* webpackIgnore: true */
+    list-style-image: url('/images/icons/bullet.svg');
     li {
       padding-left: 5px;
     }

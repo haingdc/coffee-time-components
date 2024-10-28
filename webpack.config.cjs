@@ -1,6 +1,7 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const fs = require('fs').promises;
+const webpack = require('webpack');
 
 /**
  * @type {import("webpack/types").Configuration}
@@ -24,12 +25,54 @@ module.exports = {
       type: 'module',
     },
     clean: true,
-    // publicPath: './public',
+    // publicPath: '/static/images/icons/',
   },
   experiments: {
     outputModule: true,
   },
   module: {
+    // rules: [
+    //   {
+    //     test: /\.tsx?$/,
+    //     use: 'ts-loader',
+    //     exclude: /node_modules/,
+    //   },
+    //   {
+    //     test: /\.css$/, // Kiểm tra tệp CSS
+    //     use: [
+    //       'style-loader',
+    //       {
+    //         loader: 'css-loader',
+    //         options: {
+    //           url: true,
+    //           importLoaders: 1,
+    //         }
+    //       }
+    //     ],
+    //   },
+    //   {
+    //     test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+    //     issuer: /\.[jt]sx?$/,
+    //     use: [
+    //       'babel-loader',
+    //       '@svgr/webpack',
+    //       'url-loader',
+    //     ],
+    //   },
+    //   {
+    //     test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+    //     use: [
+    //       {
+    //         loader: 'url-loader',
+    //         options: {
+    //           outputPath: 'static/images/icons',
+    //           limit: 8192,
+    //           name: '[name].[ext]'
+    //         },
+    //       }
+    //     ],
+    //   },
+    // ],
     rules: [
       {
         test: /\.tsx?$/,
@@ -88,10 +131,10 @@ module.exports = {
           from: 'src/shared/base.css', // Đường dẫn tới file mà bạn muốn sao chép
           to: 'styles/tailwind/base.css', // Đường dẫn nơi bạn muốn file được sao chép
         },
-        // {
-        //   from: 'images/icons/bullet.svg', // Sao chép bullet.svg
-        //   to: 'icons/bullet.svg',
-        // },
+        {
+          from: path.resolve(__dirname, 'images'), // Đường dẫn nguồn
+          to: path.resolve(__dirname, 'dist/images'),   // Đường dẫn đích
+        },
         // {
         //   from: 'src/list/components/list.css',
         //   to: 'styles/tailwind/list.css',
