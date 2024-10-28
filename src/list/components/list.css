@@ -1,10 +1,3 @@
-@layer base {
-  /* Khởi tạo các kiểu lập trình cơ bản */
-  ul {
-    list-style-image: none;
-  }
-}
-
 @layer components {
   .un-order-list {
     /* webpackIgnore: true */
