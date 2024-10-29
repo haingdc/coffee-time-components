@@ -1,4 +1,4 @@
-@layer reset {
+@layer my-base {
   /* Khởi tạo các kiểu lập trình cơ bản */
   details {
     display: block;
@@ -10,7 +10,7 @@
   }
 }
 
-@layer components {
+@layer my-components {
   .accordion {
     border: 1px solid #ccc;
     border-radius: 5px;

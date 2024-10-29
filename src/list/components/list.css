@@ -1,4 +1,4 @@
-@layer components {
+@layer my-components {
   .un-order-list {
     /* webpackIgnore: true */
     list-style-image: url('/images/icons/bullet.svg');

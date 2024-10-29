@@ -145,25 +145,25 @@ module.exports = {
         },
       ],
     }),
-    {
-      apply: (compiler) => {
-        compiler.hooks.afterEmit.tapAsync('AfterEmitPlugin', async (compilation, callback) => {
-          const filesToUpdate = [
-            path.resolve(__dirname, 'dist/styles/tailwind/base.css'),
-            path.resolve(__dirname, 'dist/styles/tailwind/accordion.css'),
-            path.resolve(__dirname, 'dist/styles/tailwind/list.css'),
-          ];
+    // {
+    //   apply: (compiler) => {
+    //     compiler.hooks.afterEmit.tapAsync('AfterEmitPlugin', async (compilation, callback) => {
+    //       const filesToUpdate = [
+    //         path.resolve(__dirname, 'dist/styles/tailwind/base.css'),
+    //         path.resolve(__dirname, 'dist/styles/tailwind/accordion.css'),
+    //         path.resolve(__dirname, 'dist/styles/tailwind/list.css'),
+    //       ];
 
-          // Append '@tailwind' cho tất cả các file
-          try {
-            await Promise.all(filesToUpdate.map(appendTailwindToFile));
-            callback(); // Gọi callback khi hoàn thành
-          } catch (err) {
-            callback(err)
-          }
-        });
-      },
-    },
+    //       // Append '@tailwind' cho tất cả các file
+    //       try {
+    //         await Promise.all(filesToUpdate.map(appendTailwindToFile));
+    //         callback(); // Gọi callback khi hoàn thành
+    //       } catch (err) {
+    //         callback(err)
+    //       }
+    //     });
+    //   },
+    // },
   ]
 };
 
