@@ -2,10 +2,10 @@ import clsx from 'clsx/lite'
 import React from 'react'
 import './heading.css'
 
-export type SectionProps = React.DetailsHTMLAttributes<HTMLElement> &
+export type HeadingProps = React.DetailsHTMLAttributes<HTMLElement> &
   React.PropsWithChildren
 
-const Heading: React.FC<SectionProps> = ({ className, ...props }) => {
+const Heading: React.FC<HeadingProps> = ({ className, ...props }) => {
   return <h2 {...props} className={clsx('heading', className)} />
 }
 
