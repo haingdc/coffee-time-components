@@ -2,7 +2,11 @@
   .un-order-list {
     /* webpackIgnore: true */
     list-style-image: url('/images/icons/bullet.svg');
+    padding-inline-start: 16px;
     li {
+      font-size: 16px;
+      line-height: 27px;
+      letter-spacing: 0;
       padding-left: 5px;
     }
   }
