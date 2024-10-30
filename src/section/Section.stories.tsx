@@ -1,9 +1,9 @@
 import { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
-import Section from '.'
+import Section from './components/Section'
 import ListItem from '../list/components/ListItem'
 import UnOrderList from '../list/components/UnOrderList'
-import Heading from '../heading'
+import Heading from '../heading/components/Heading'
 
 const meta: Meta<typeof Section> = {
   title: 'Section',
