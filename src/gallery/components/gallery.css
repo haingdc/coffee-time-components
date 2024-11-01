@@ -1,0 +1,33 @@
+@layer my-components {
+  .gallery-container {
+    container-name: galleryContainer;
+    container-type: inline-size;
+  }
+
+  .gallery-parents {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery-child {
+    >img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  @container (min-width: 600px) {
+    .gallery-parents {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: masonry;
+      gap: 16px;
+    }
+  }
+  @container (min-width: 800px) {
+    .gallery-parents {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
