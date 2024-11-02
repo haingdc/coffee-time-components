@@ -8,6 +8,7 @@
   .gallery-parents {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
     grid-template-rows: masonry;
   }
 
@@ -22,7 +23,6 @@
   @container (min-width: 600px) {
     .gallery-parents {
       grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
     }
   }
   @container (min-width: 800px) {
