@@ -6,7 +6,8 @@ export interface GalleryChildProps
   largeUrl: string
   thumbnailUrl: string
   width: number
-  height: number
+  height: number,
+  alt?: string,
 }
 
 const GalleryChild: React.FC<GalleryChildProps> = ({ className, ...props }) => {
@@ -19,7 +20,7 @@ const GalleryChild: React.FC<GalleryChildProps> = ({ className, ...props }) => {
       target='_blank'
       rel='noreferrer'
     >
-      <img src={props.thumbnailUrl} alt='' />
+      <img src={props.thumbnailUrl} alt={props.alt} />
     </a>
   )
 }
