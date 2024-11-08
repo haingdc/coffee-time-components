@@ -1,22 +1,23 @@
 import React from 'react'
 import GalleryChild from './components/GalleryChild'
 import GalleryParents from './components/GalleryParents'
+import GalleryContainer from './components/GalleryContainer'
 import { Meta, StoryFn } from '@storybook/react'
 
-const meta: Meta<typeof GalleryParents> = {
+const meta: Meta<typeof GalleryContainer> = {
   title: 'Gallery',
-  component: GalleryParents,
+  component: GalleryContainer,
 }
 export default meta
 
-const Template: StoryFn<typeof GalleryParents> = (args) => (
-  <GalleryParents {...args} />
+const Template: StoryFn<typeof GalleryContainer> = (args) => (
+  <GalleryContainer {...args} />
 )
 
 export const Default = Template.bind({})
 Default.args = {
   children: (
-    <>
+    <GalleryParents>
       <GalleryChild
         key='1'
         largeUrl='https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg'
@@ -66,6 +67,6 @@ Default.args = {
         width={1170}
         height={750}
       />
-    </>
+    </GalleryParents>
   ),
 }
