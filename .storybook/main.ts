@@ -1,5 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-webpack5";
-const path = require('path');
+import path from "path";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -19,12 +19,12 @@ const config: StorybookConfig = {
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        '@': path.resolve(__dirname, '../src'),
-        '@images': path.resolve(__dirname, '../images'),
+        "@": path.resolve(__dirname, "../src"),
+        "@images": path.resolve(__dirname, "../images"),
       };
     }
     return config;
   },
-  staticDirs: ['../dist'],
+  staticDirs: ["../dist"],
 };
 export default config;

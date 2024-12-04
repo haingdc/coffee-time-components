@@ -24,6 +24,7 @@ module.exports = {
     library: {
       type: 'module',
     },
+    // libraryTarget: 'module',
     clean: true,
     // publicPath: '/static/images/icons/',
   },
