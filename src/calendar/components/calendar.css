@@ -1,25 +1,122 @@
-.calendar-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); 
-  gap: 2px;
-  padding: 10px;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: tomato;
-  border-radius: 20px;
-}
+@layer my-components {
+  .calendar-root {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+  }
+  .calendar-container {
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    padding: 16px 8px;
+    background-color: HSL(24, 17.2%, 94.3%);
+    border-radius: 4px;
+    gap: 8px 1px;
+  }
 
-.calendar-box {
-  background-color: #ff0000;
-  color: #ff9999;
-  font-size: 8px;
-  text-align: left;
-  padding: 2px;
-  border: 1px dashed black;
-}
+  .calendar-box {
+    --background-color: #f2f2f2;
+    --color: #bf0413;
+    aspect-ratio: 1/1;
+    background: var(--background-color);
+    display: grid;
+    place-content: center;
+    color: var(--color);
+    font-size: 8px;
+    text-align: left;
+    padding: 2px;
+    border-radius: 0.5rem;
+    &:nth-child(8n + 1),
+    &:nth-child(8n + 4),
+    &:nth-child(8n + 7) {
+      --background-color: #bf0413;
+      --color: #f2f2f2;
+    }
+    &:nth-child(8n + 2),
+    &:nth-child(8n + 5),
+    &:nth-child(8n + 8) {
+      --background-color: #274001;
+      --color: #f2f2f2;
+    }
+    &:nth-child(8n + 3),
+    &:nth-child(8n + 6) {
+      --background-color: linear-gradient(to bottom, #dbdbdb, #f9f9f9, #dbdbdb);
+      --color: #bf0413;
+    }
+  }
 
-.calendar-box p {
-  margin: 0;
-  text-align: center;
-  font-size: 12px;
+  .calendar-box-today {
+    background-color: 'transparent';
+    background-image: url('/images/calendar/reindeer.jpg');
+    background-size: cover;
+    border: 6px solid #ffaa00;
+    color: transparent;
+  }
+
+  .calendar-box p {
+    margin: 0;
+    text-align: center;
+    font-size: 2.8rem;
+  }
+
+  .calendar-photo {
+    width: 100%;
+    height: auto;
+  }
+
+  /* HTML: <div class="ribbon">Your text content</div> */
+  .ribbon {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    .content {
+      padding: 8px 0;
+    }
+  }
+  .ribbon {
+    --s: 1.8em; /* the ribbon size */
+    --d: 0.8em; /* the depth */
+    --c: 0.8em; /* the cutout part */
+
+    padding: 0 calc(var(--s) + 0.5em) var(--d);
+    line-height: 1;
+    background: conic-gradient(
+          at left var(--s) bottom var(--d),
+          #0000 25%,
+          #0008 0 37.5%,
+          #0004 0
+        )
+        0 /50% 100% no-repeat,
+      conic-gradient(
+          at right var(--s) bottom var(--d),
+          #0004 62.5%,
+          #0008 0 75%,
+          #0000 0
+        )
+        100%/50% 100% no-repeat;
+    clip-path: polygon(
+      0 var(--d),
+      var(--s) var(--d),
+      var(--s) 0,
+      calc(100% - var(--s)) 0,
+      calc(100% - var(--s)) var(--d),
+      100% var(--d),
+      calc(100% - var(--c)) calc(50% + var(--d) / 2),
+      100% 100%,
+      calc(100% - var(--s) - var(--d)) 100%,
+      calc(100% - var(--s) - var(--d)) calc(100% - var(--d)),
+      calc(var(--s) + var(--d)) calc(100% - var(--d)),
+      calc(var(--s) + var(--d)) 100%,
+      0 100%,
+      var(--c) calc(50% + var(--d) / 2)
+    );
+    background-color: #cc333f; /* the main color */
+    width: fit-content;
+  }
+  @container (min-width: 600px) {
+  }
+  @container (min-width: 800px) {
+  }
 }

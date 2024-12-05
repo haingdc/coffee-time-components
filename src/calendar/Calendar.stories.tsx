@@ -14,7 +14,5 @@ const Template: StoryFn<typeof Calendar> = (args) => (
 
 export const Default = Template.bind({})
 Default.args = {
-  children: (
-    <Calendar></Calendar>
-  ),
+  index: 5,
 }
