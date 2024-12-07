@@ -49,6 +49,7 @@
 
   .calendar-box-today {
     background-color: 'transparent';
+    /* webpackIgnore: true */
     background-image: url('/images/calendar/reindeer.jpg');
     background-size: cover;
     border: 6px solid #ffaa00;
