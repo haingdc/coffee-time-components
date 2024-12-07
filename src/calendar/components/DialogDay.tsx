@@ -9,33 +9,27 @@ export interface DialogDayProps
 
 export type Ref = HTMLDialogElement
 
-export const DialogDay = forwardRef<Ref, DialogDayProps>(
-  ({ canOpen }, ref) => {
-    return (
-      <>
-        <dialog className='dialog-day' ref={ref}>
-          {canOpen ? (
-            <p>Chocolate for you in a cozy day</p>
-          ) : (
-            <p>Waiting until reaching that day</p>
-          )}
-          {canOpen ? (
-            <img
-              className='content-photo'
-              src='./images/calendar/gifts/chocolate.jpg'
-              alt='gift'
-            />
-          ) : (
-            <img
-              className='content-photo'
-              src='./images/calendar/gifts/box.png'
-              alt='gift'
-            />
-          )}
-        </dialog>
-      </>
-    )
+export const DialogDay = forwardRef<Ref, DialogDayProps>(({ canOpen }, ref) => {
+  const variants = {
+    canOpen: {
+      text: 'Chocolate for you in a cozy day',
+      image: './images/calendar/gifts/chocolate.jpg',
+    },
+    cannotOpen: {
+      text: 'Waiting until reaching that day',
+      image: './images/calendar/gifts/box.png',
+    },
   }
-)
+  const { text, image } = variants[canOpen ? 'canOpen' : 'cannotOpen']
+  return (
+    <>
+      <dialog className='dialog-day' ref={ref}>
+        <img src='/images/icons/cross.svg' alt='close' className='close-icon' />
+        <p>{text}</p>
+        <img className='content-photo' src={image} alt='gift' />
+      </dialog>
+    </>
+  )
+})
 
 export default DialogDay
