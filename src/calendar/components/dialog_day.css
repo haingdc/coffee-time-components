@@ -15,10 +15,16 @@
     display 0.7s ease-out allow-discrete;
   /* Equivalent to
   transition: all 0.7s allow-discrete; */
+
+  header {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 .content-photo {
   width: 100%;
+  height: auto;
 }
 
 /*   Before-open state  */
@@ -43,13 +49,11 @@
 }
 
 .dialog-day[open]::backdrop {
-  background-image: linear-gradient(
-    45deg,
-    magenta,
-    rebeccapurple,
-    dodgerblue,
-    green
-  );
+  background-image: linear-gradient(45deg,
+      magenta,
+      rebeccapurple,
+      dodgerblue,
+      green);
   opacity: 0.75;
 }
 

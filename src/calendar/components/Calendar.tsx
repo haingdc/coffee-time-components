@@ -1,7 +1,7 @@
 import React, { useRef, useState, type MouseEventHandler } from 'react'
 import clsx from 'clsx/lite'
 import './calendar.css'
-import DialogDay from './DialogDay'
+import DialogDay, { type DialogDayProps } from './DialogDay'
 
 export interface CalendarProps
   extends React.DetailsHTMLAttributes<HTMLElement>,
@@ -21,7 +21,6 @@ const Calendar: React.FC<CalendarProps> = ({
   const ref = useRef<HTMLDialogElement>(null)
   const openDay: MouseEventHandler<HTMLLIElement> = (event) => {
     if (!ref.current) throw Error('ref is not assigned')
-    console.log('inspect', event.currentTarget.dataset.dateIndex)
     setSelectedDate(
       new Date(
         currentDate.current.getFullYear(),
@@ -30,6 +29,10 @@ const Calendar: React.FC<CalendarProps> = ({
       )
     )
     ref.current.showModal()
+  }
+  const closeDay: DialogDayProps['onClose'] = () => {
+    if (!ref.current) throw Error('ref is not assigned')
+    ref.current.close()
   }
 
   if (!isCountdownToChristmas(currentDate.current)) {
@@ -72,6 +75,7 @@ const Calendar: React.FC<CalendarProps> = ({
         canOpen={
           selectedDate instanceof Date && selectedDate <= currentDate.current
         }
+        onClose={closeDay}
       />
     </>
   )
