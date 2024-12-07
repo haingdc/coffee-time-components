@@ -1,7 +1,7 @@
 {
   "packageManager": "npm@10.9.2",
   "name": "coffee-time-components",
-  "version": "1.0.68",
+  "version": "1.0.69",
   "types": "module",
   "description": "",
   "main": "dist/index.js",
