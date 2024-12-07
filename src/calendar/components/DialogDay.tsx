@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import './dialog_day.css'
 
 export interface DialogDayProps
@@ -9,7 +9,7 @@ export interface DialogDayProps
 
 export type Ref = HTMLDialogElement
 
-export const DialogDay = React.forwardRef<Ref, DialogDayProps>(
+export const DialogDay = forwardRef<Ref, DialogDayProps>(
   ({ canOpen }, ref) => {
     return (
       <>

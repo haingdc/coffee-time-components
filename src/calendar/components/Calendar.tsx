@@ -1,4 +1,4 @@
-import React, { type MouseEventHandler } from 'react'
+import React, { useRef, useState, type MouseEventHandler } from 'react'
 import clsx from 'clsx/lite'
 import './calendar.css'
 import DialogDay from './DialogDay'
@@ -15,10 +15,10 @@ const Calendar: React.FC<CalendarProps> = ({
   index,
   ...props
 }) => {
-  const currentDate = React.useRef<Date>(new Date())
+  const currentDate = useRef<Date>(new Date())
   const dateIndex = currentDate.current.getDate() - 1
-  const [selectedDate, setSelectedDate] = React.useState<Date | null>(null)
-  const ref = React.useRef<HTMLDialogElement>(null)
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null)
+  const ref = useRef<HTMLDialogElement>(null)
   const openDay: MouseEventHandler<HTMLLIElement> = (event) => {
     if (!ref.current) throw Error('ref is not assigned')
     console.log('inspect', event.currentTarget.dataset.dateIndex)
