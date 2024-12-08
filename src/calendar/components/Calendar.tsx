@@ -2,6 +2,10 @@ import React, { useRef, useState, type MouseEventHandler } from 'react'
 import clsx from 'clsx/lite'
 import './calendar.css'
 import DialogDay, { type DialogDayProps } from './DialogDay'
+import { toZonedTime } from 'date-fns-tz'
+
+// Giả sử bạn muốn xử lý ngày tháng theo múi giờ UTC+7
+const timeZone = 'Asia/Bangkok' // GMT+7
 
 export interface CalendarProps
   extends React.DetailsHTMLAttributes<HTMLElement>,
@@ -15,7 +19,7 @@ const Calendar: React.FC<CalendarProps> = ({
   index,
   ...props
 }) => {
-  const currentDate = useRef<Date>(new Date())
+  const currentDate = useRef<Date>(getCurrentDateInTimeZone())
   const dateIndex = currentDate.current.getDate() - 1
   const [selectedDate, setSelectedDate] = useState<Date | null>(null)
   const ref = useRef<HTMLDialogElement>(null)
@@ -82,16 +86,21 @@ const Calendar: React.FC<CalendarProps> = ({
 }
 
 function isCountdownToChristmas(date: Date) {
+  const zonedDate = toZonedTime(date, timeZone) // Chuyển đổi sang timezone
   const year = date.getFullYear()
 
   // Tạo đối tượng Date cho ngày 1 tháng 12
   const startOfCountdown = new Date(year, 11, 1) // Tháng 11 là tháng 12 do tháng đếm từ 0
-
   // Tạo đối tượng Date cho ngày 24 tháng 12
   const endOfCountdown = new Date(year, 11, 24)
-
   // Kiểm tra nếu ngày hiện tại nằm trong khoảng từ ngày 1 đến ngày 24 tháng 12
-  return date >= startOfCountdown && date <= endOfCountdown
+  return zonedDate >= startOfCountdown && zonedDate <= endOfCountdown
+}
+
+function getCurrentDateInTimeZone() {
+  const currentDate = new Date()
+  const zonedDate = toZonedTime(currentDate, timeZone)
+  return zonedDate
 }
 
 export default Calendar
